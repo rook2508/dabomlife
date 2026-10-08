@@ -1,27 +1,27 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f4ed" />
-    <title>다봄 · MVP 체험 데모</title>
+    <title>Dabom · Interactive demo</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body><aside class="demo-banner"><a href="../index.html" target="_top">← 다봄 소개</a><strong>MVP 체험 데모</strong><span>실제 결제·예약·보호자 연결 없이 흐름만 체험합니다.</span></aside>
+  <body><aside class="demo-banner"><a href="../index.html" target="_top">← About Dabom</a><strong>Interactive demo</strong><span>Explore the flow. No real payments, bookings, or caregiver messages.</span></aside>
     <div class="app-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="다봄 홈">
-          <span class="brand-mark" aria-hidden="true">다</span>
+        <a class="brand" href="#" aria-label="Dabom home">
+          <span class="brand-mark" aria-hidden="true">D</span>
           <span>
-            <strong>다봄</strong>
-            <small>AI 생활비서</small>
+            <strong>Dabom</strong>
+            <small>AI daily-life assistant</small>
           </span>
         </a>
-        <div class="top-actions">
-          <button class="text-button" id="fontToggle" type="button" aria-pressed="false">글씨 크게</button>
+        <div class="top-actions"><a class="text-button language-switch" id="languageSwitch" href="./ko.html" lang="ko">한국어</a>
+          <button class="text-button" id="fontToggle" type="button" aria-pressed="false">Larger text</button>
           <button class="guardian-pill" id="guardianButton" type="button">
             <span class="status-dot"></span>
-            보호자 역할 체험
+            Caregiver view
           </button>
         </div>
       </header>
@@ -29,40 +29,40 @@
       <main>
         <section class="hero" aria-labelledby="heroTitle">
           <div class="hero-copy">
-            <p class="eyebrow">복잡한 앱은 몰라도 괜찮아요</p>
-            <h1 id="heroTitle">하고 싶은 일을<br /><span>말로 알려주세요.</span></h1>
+            <p class="eyebrow">EVERYDAY HELP, ONE SIMPLE REQUEST</p>
+            <h1 id="heroTitle">Tell us what<br /><span>you need.</span></h1>
             <p class="hero-description">
-              쇼핑, 배달, 병원 예약, 민원까지.<br />다봄이 순서대로 도와드리고 중요한 결정은 꼭 다시 확인합니다.
+              Shopping, meals, taxi rides, appointments, and paperwork.<br />Dabom guides each step and asks before important decisions.
             </p>
           </div>
 
           <div class="assistant-card" id="assistantCard">
             <div class="assistant-status" aria-live="polite">
-              <span class="assistant-avatar" aria-hidden="true">봄</span>
+              <span class="assistant-avatar" aria-hidden="true">D</span>
               <div>
-                <strong id="assistantTitle">무엇을 도와드릴까요?</strong>
-                <p id="assistantSubtitle">아래 버튼을 누르고 편하게 말씀하세요.</p>
+                <strong id="assistantTitle">How can I help?</strong>
+                <p id="assistantSubtitle">Tap to speak, type a request, or try an example.</p>
               </div>
             </div>
 
-            <button class="voice-button" id="voiceButton" type="button" aria-label="음성으로 요청하기">
+            <button class="voice-button" id="voiceButton" type="button" aria-label="Make a voice request">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 14.5a3.5 3.5 0 0 0 3.5-3.5V5a3.5 3.5 0 1 0-7 0v6a3.5 3.5 0 0 0 3.5 3.5Zm6-3.5a1 1 0 1 0-2 0 4 4 0 1 1-8 0 1 1 0 1 0-2 0 6 6 0 0 0 5 5.91V19H8.5a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2H13v-2.09A6 6 0 0 0 18 11Z" />
               </svg>
-              <span>눌러서 말하기</span>
+              <span>Tap to speak</span>
             </button>
 
             <form class="request-form" id="requestForm">
-              <label class="sr-only" for="requestInput">도움이 필요한 일을 입력하세요</label>
-              <input id="requestInput" name="request" autocomplete="off" placeholder="직접 적어도 돼요" />
-              <button type="submit">보내기</button>
+              <label class="sr-only" for="requestInput">Enter what you need help with</label>
+              <input id="requestInput" name="request" autocomplete="off" placeholder="You can type your request here" />
+              <button type="submit">Send</button>
             </form>
 
-            <div class="quick-requests" aria-label="요청 예시">
-              <button type="button" data-request="생수 한 박스 주문해줘">💧 생수 주문</button>
-              <button type="button" data-request="내일 오전에 정형외과 예약하고 싶어">🏥 병원 예약</button>
-              <button type="button" data-request="주민등록등본이 필요해">📄 등본 발급</button>
-              <button type="button" data-request="이 문자가 사기인지 봐줘">🛡️ 사기 확인</button>
+            <div class="quick-requests" aria-label="Example requests"><button type="button" data-request="Help me get a taxi to the hospital">🚕 Taxi ride</button><button type="button" data-request="Help me order dinner for delivery">🍚 Meal delivery</button>
+              <button type="button" data-request="Order a case of water">💧 Order water</button>
+              <button type="button" data-request="Help me book a clinic appointment tomorrow morning">🏥 Clinic appointment</button>
+              <button type="button" data-request="Help me prepare a residence certificate">📄 Prepare paperwork</button>
+              <button type="button" data-request="Check if this message is a scam">🛡️ Check a message</button>
             </div>
           </div>
         </section>
@@ -70,19 +70,19 @@
         <section class="workflow-section" id="workflowSection" hidden aria-live="polite">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">지금 도와드리는 일</p>
-              <h2 id="taskHeading">요청을 확인했어요</h2>
+              <p class="eyebrow">YOUR CURRENT REQUEST</p>
+              <h2 id="taskHeading">Your request is ready</h2>
             </div>
-            <span class="safety-badge" id="safetyBadge">안전 확인 중</span>
+            <span class="safety-badge" id="safetyBadge">Checking the next step</span>
           </div>
 
           <div class="workflow-grid">
             <article class="task-card">
               <div class="task-icon" id="taskIcon">✓</div>
               <div>
-                <p class="task-label" id="taskLabel">생활 요청</p>
-                <h3 id="taskSummary">요청 내용을 정리하고 있어요.</h3>
-                <p id="taskDetail">다봄이 필요한 단계를 안전하게 확인합니다.</p>
+                <p class="task-label" id="taskLabel">Everyday request</p>
+                <h3 id="taskSummary">Preparing clear next steps.</h3>
+                <p id="taskDetail">Dabom checks the steps with you.</p>
               </div>
             </article>
 
@@ -91,12 +91,12 @@
 
           <div class="action-panel" id="actionPanel">
             <div>
-              <strong id="actionTitle">다음 단계로 진행할까요?</strong>
-              <p id="actionDescription">실제 결제나 개인정보 변경 전에는 반드시 다시 확인합니다.</p>
+              <strong id="actionTitle">Ready for the next step?</strong>
+              <p id="actionDescription">Payments and personal information changes always need confirmation.</p>
             </div>
             <div class="action-buttons">
-              <button class="secondary-button" id="cancelTask" type="button">그만하기</button>
-              <button class="primary-button" id="continueTask" type="button">계속하기</button>
+              <button class="secondary-button" id="cancelTask" type="button">Cancel</button>
+              <button class="primary-button" id="continueTask" type="button">Continue</button>
             </div>
           </div>
         </section>
@@ -104,38 +104,38 @@
         <section class="history-section" aria-labelledby="historyTitle">
           <div class="section-heading history-heading">
             <div>
-              <p class="eyebrow">최근 도움 내역</p>
-              <h2 id="historyTitle">어디까지 진행됐는지 한눈에</h2>
+              <p class="eyebrow">RECENT ACTIVITY</p>
+              <h2 id="historyTitle">See where things stand</h2>
             </div>
-            <button class="text-button" id="clearHistory" type="button">내역 지우기</button>
+            <button class="text-button" id="clearHistory" type="button">Clear history</button>
           </div>
           <div class="history-list" id="historyList">
-            <div class="history-empty">아직 처리한 일이 없어요. 위에서 필요한 일을 말씀해보세요.</div>
+            <div class="history-empty">Nothing here yet. Try a request above.</div>
           </div>
-          <p class="demo-note">현재 MVP는 실제 결제·예약·민원 제출을 실행하지 않는 안전한 데모입니다.</p>
+          <p class="demo-note">This demo does not make real payments, bookings, or official submissions.</p>
         </section>
 
         <section class="trust-section" aria-labelledby="trustTitle">
           <div class="trust-copy">
-            <p class="eyebrow">가족이 안심할 수 있게</p>
-            <h2 id="trustTitle">AI가 멋대로 결정하지 않아요.</h2>
-            <p>돈, 개인정보, 계약처럼 중요한 일은 마지막 순간에 본인 또는 보호자의 확인을 받도록 설계했습니다.</p>
+            <p class="eyebrow">PEACE OF MIND FOR FAMILIES</p>
+            <h2 id="trustTitle">You stay in control.</h2>
+            <p>Important decisions about money, personal information, and commitments need your confirmation or a caregiver review.</p>
           </div>
           <div class="trust-cards">
             <article>
               <span>01</span>
-              <strong>먼저 찾아보기</strong>
-              <p>상품, 병원, 민원처럼 필요한 정보를 AI가 대신 찾습니다.</p>
+              <strong>Prepare the options</strong>
+              <p>See how Dabom could organize choices for shopping, appointments, and paperwork.</p>
             </article>
             <article>
               <span>02</span>
-              <strong>쉽게 설명하기</strong>
-              <p>작은 글씨와 어려운 용어 대신 중요한 내용만 크게 보여줍니다.</p>
+              <strong>Explain clearly</strong>
+              <p>Clear language and readable text help you understand what matters.</p>
             </article>
             <article>
               <span>03</span>
-              <strong>중요한 건 확인받기</strong>
-              <p>결제·송금·신청 직전에는 반드시 한 번 더 묻습니다.</p>
+              <strong>Ask before acting</strong>
+              <p>You review the details before payments or applications.</p>
             </article>
           </div>
         </section>
@@ -144,22 +144,22 @@
 
     <div class="modal-backdrop" id="guardianModal" hidden>
       <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button>
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
         <div class="modal-icon" aria-hidden="true">👨‍👩‍👧</div>
-        <p class="eyebrow">보호자 확인</p>
-        <h2 id="modalTitle">중요한 단계라서 보호자에게 확인할게요.</h2>
-        <p id="modalText">이 요청을 가족에게 보내 확인받습니다.</p>
+        <p class="eyebrow">CAREGIVER REVIEW</p>
+        <h2 id="modalTitle">Let a caregiver review this step.</h2>
+        <p id="modalText">Try sharing this request with a caregiver in the demo.</p>
         <div class="approval-box">
-          <span>보낼 내용</span>
-          <strong id="approvalRequest">요청 내용</strong>
+          <span>Request to review</span>
+          <strong id="approvalRequest">Request details</strong>
         </div>
         <div id="requestApprovalActions">
-          <button class="primary-button full" id="sendApproval" type="button">보호자에게 승인 요청 보내기</button>
-          <button class="secondary-button full" id="selfConfirm" type="button">제가 직접 확인할게요</button>
+          <button class="primary-button full" id="sendApproval" type="button">Request caregiver approval</button>
+          <button class="secondary-button full" id="selfConfirm" type="button">I'll review it myself</button>
         </div>
         <div class="guardian-review-actions" id="guardianReviewActions" hidden>
-          <button class="secondary-button" id="guardianReject" type="button">거절하기</button>
-          <button class="primary-button" id="guardianApprove" type="button">승인하기</button>
+          <button class="secondary-button" id="guardianReject" type="button">Decline</button>
+          <button class="primary-button" id="guardianApprove" type="button">Approve</button>
         </div>
       </section>
     </div>

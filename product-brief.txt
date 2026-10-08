@@ -1,6 +1,6 @@
-Dabom (Senior Life AI)
+Dabom | Product & Launch Brief
 
-An early Korean-language daily-life assistant prototype for older adults and their families. The browser demo includes voice/text input, rule-based request routing, step-by-step guidance and simulated caregiver approvals. It does not perform real orders, payments, bookings or document submissions. Claude API integration, further development and commercialization are undecided.
-
+We are building a daily-life AI assistant for older adults and caregivers in South Korea.
+Read the illustrated product brief: https://dabomlife.com/dabom-product-brief.pdf
 Website: https://dabomlife.com/
 Contact: admin@dabomlife.com
